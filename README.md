@@ -12,3 +12,6 @@ or to use the timer function:
 ```html
 file:///F:/JavaScript/countdown/index.html
 ```
+
+# Screenshots
+![timer](http://puu.sh/3nGsa.png)
