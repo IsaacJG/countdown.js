@@ -7,3 +7,8 @@ Example:
 ```html
 file:///F:/JavaScript/countdown/index.html?15:00:00
 ```
+
+or to use the timer function:
+```html
+file:///F:/JavaScript/countdown/index.html
+```
