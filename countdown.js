@@ -1,6 +1,6 @@
 ($(function () {
     var rawTime = document.URL.substring(document.URL.indexOf('?')+1);
-    var toStart = validateTime(rawTime);
+    var toEnd = validateTime(rawTime);
     
     function validateTime(time) {
         if (time.indexOf(':') > -1) {
@@ -46,13 +46,17 @@
     }
     
     function tick() {
-        var diff = getTimeDifference(toStart);
-        if (diff) {
-        	$('#timer').text(synthesizeTime(diff));
-        	setTimeout(tick, 1);
+        if (rawTime !== document.URL) {
+            var diff = getTimeDifference(toEnd);
+            if (diff) {
+            	$('#timer').text(synthesizeTime(diff));
+            	setTimeout(tick, 1);
+            } else {
+            	$('#timer').text('00:00:00');
+            	flash(true);
+            }
         } else {
-        	$('#timer').text('00:00:00');
-        	flash(true);
+            
         }
     }
 
