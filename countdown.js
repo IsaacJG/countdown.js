@@ -71,7 +71,7 @@
         function update() {
             var now = new Date();
             var diff = getTimeDifference([now.getHours(), now.getMinutes(), now.getSeconds()], begin);
-            $('#timer').text(synthesizeTime(diff));
+            if (diff) $('#timer').text(synthesizeTime(diff));
             setTimeout(update, 1);
         }
         update();
