@@ -31,7 +31,7 @@
     
     function getTimeDifference(time, origin) {
         var seconds = (time[0]*3600) + (time[1]*60) + time[2];
-        if (typeof(origin) === undefined) {
+        if (typeof(origin) === 'undefined') {
             var d = new Date();
             originSeconds = (d.getHours()*3600) + (d.getMinutes()*60) + d.getSeconds();
         } else {
